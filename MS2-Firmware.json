@@ -1,6 +1,10 @@
 {
   "Configurations": [
     {
+    {
+      "Version": "1.1.8",
+      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_1_8.bin"
+    },
       "Version": "1.1.7",
       "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_1_7.bin"
     },
