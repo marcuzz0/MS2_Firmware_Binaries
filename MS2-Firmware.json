@@ -2,47 +2,47 @@
   "Configurations": [
     {
       "Version": "1.1.9",
-      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_1_9.bin"
+      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/Binaries/MS2_Firmware_v1_1_9.bin"
     },
     {
       "Version": "1.1.8",
-      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_1_8.bin"
+      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/Binaries/MS2_Firmware_v1_1_8.bin"
     },
     {
       "Version": "1.1.7",
-      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_1_7.bin"
+      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/Binaries/MS2_Firmware_v1_1_7.bin"
     },
     {
       "Version": "1.1.6",
-      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_1_6.bin"
+      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/Binaries/MS2_Firmware_v1_1_6.bin"
     },
     {
       "Version": "1.1.5",
-      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_1_5.bin"
+      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/Binaries/MS2_Firmware_v1_1_5.bin"
     },
     {
       "Version": "1.1.4",
-      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_1_4.bin"
+      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/Binaries/MS2_Firmware_v1_1_4.bin"
     },
     {
       "Version": "1.1.3",
-      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_1_3.bin"
+      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/Binaries/MS2_Firmware_v1_1_3.bin"
     },
     {
       "Version": "1.1.2",
-      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_1_2.bin"
+      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/Binaries/MS2_Firmware_v1_1_2.bin"
     },
     {
       "Version": "1.1.1",
-      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_1_1.bin"
+      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/Binaries/MS2_Firmware_v1_1_1.bin"
     },
     {
       "Version": "1.1.0",
-      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_1_0.bin"
+      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/Binaries/MS2_Firmware_v1_1_0.bin"
     },
     {
       "Version": "1.0.0",
-      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/MS2_Firmware_v1_0_0.bin"
+      "URL": "https://raw.githubusercontent.com/marcuzz0/MS2_Firmware_Binaries/main/Binaries/MS2_Firmware_v1_0_0.bin"
     }
   ]
 }
