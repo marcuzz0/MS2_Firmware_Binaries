@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Installa MS2net</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/esp-web-tools@10.4.0/dist/web/install-button.js"></script>
+    <style>
+        :root {
+            --fondo: #eef1f5;
+            --riquadro: #ffffff;
+            --testo: #1b2430;
+            --tenue: #5b6675;
+            --bordo: #d3d9e1;
+            --primario: #1f6fb2;
+            --su-primario: #ffffff;
+            --avviso: #8a5a00;
+            --avviso-fondo: #fff4dc;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --fondo: #0f1620;
+                --riquadro: #182230;
+                --testo: #e6ebf1;
+                --tenue: #9aa6b4;
+                --bordo: #2a3747;
+                --primario: #4a9be0;
+                --su-primario: #0f1620;
+                --avviso: #f0c46a;
+                --avviso-fondo: #2e2616;
+            }
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: var(--fondo);
+            color: var(--testo);
+            font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        }
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 32px 16px 48px;
+        }
+        .testa {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        h1 { font-size: 24px; margin: 0; font-weight: 600; }
+        .lingua {
+            display: flex;
+            gap: 8px;
+        }
+        .lingua button {
+            width: 44px;
+            height: 32px;
+            border: 1px solid var(--bordo);
+            border-radius: 6px;
+            background: var(--riquadro);
+            color: var(--testo);
+            font: inherit;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .lingua button[aria-pressed="true"] {
+            background: var(--primario);
+            border-color: var(--primario);
+            color: var(--su-primario);
+        }
+        .versione { color: var(--tenue); margin: 6px 0 24px; }
+        .riquadro {
+            background: var(--riquadro);
+            border: 1px solid var(--bordo);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        ol { margin: 0; padding-left: 22px; }
+        li + li { margin-top: 10px; }
+        .avviso {
+            background: var(--avviso-fondo);
+            color: var(--avviso);
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin-top: 16px;
+        }
+        .azione { text-align: center; margin: 24px 0 8px; }
+        .installa {
+            width: 220px;
+            height: 44px;
+            border: 0;
+            border-radius: 8px;
+            background: var(--primario);
+            color: var(--su-primario);
+            font: inherit;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        .nota { color: var(--tenue); font-size: 14px; }
+        .firma { color: var(--tenue); font-size: 14px; margin-top: 28px; text-align: center; }
+        [data-lingua]:not(.attiva) { display: none; }
+    </style>
+</head>
+<body>
+<main>
+    <div class="testa">
+        <h1><span data-lingua="it" class="attiva">Installa il firmware MS2net</span><span data-lingua="en">Install the MS2net firmware</span></h1>
+        <div class="lingua">
+            <button type="button" data-scegli="it" aria-pressed="true">IT</button>
+            <button type="button" data-scegli="en" aria-pressed="false">EN</button>
+        </div>
+    </div>
+    <p class="versione"><span data-lingua="it" class="attiva">Versione</span><span data-lingua="en">Version</span> <span id="versione">…</span></p>
+
+    <div class="riquadro">
+        <ol data-lingua="it" class="attiva">
+            <li>Collega il ricevitore al computer con il cavo USB.</li>
+            <li>Premi <b>Installa</b> e scegli la porta del ricevitore.</li>
+            <li>Alla domanda sulla cancellazione: <b>sì</b> per una scheda nuova, <b>no</b> per un ricevitore già in uso.</li>
+            <li>Attendi la fine della scrittura: il ricevitore riparte da solo.</li>
+        </ol>
+        <ol data-lingua="en">
+            <li>Connect the receiver to the computer with the USB cable.</li>
+            <li>Press <b>Install</b> and pick the receiver's port.</li>
+            <li>When asked about erasing: <b>yes</b> for a new board, <b>no</b> for a receiver already in use.</li>
+            <li>Wait until writing is over: the receiver restarts by itself.</li>
+        </ol>
+        <div class="avviso">
+            <span data-lingua="it" class="attiva">Cancellare un ricevitore già in uso toglie profili, reti WiFi e caster: si ripartirebbe dalle impostazioni di fabbrica. Per aggiornarlo basta il pannello del ricevitore.</span>
+            <span data-lingua="en">Erasing a receiver already in use removes its profiles, WiFi networks and casters: it would start again from factory settings. To update it, its own configuration page is enough.</span>
+        </div>
+    </div>
+
+    <div class="azione">
+        <esp-web-install-button manifest="manifest.json">
+            <button slot="activate" class="installa"><span data-lingua="it" class="attiva">Installa</span><span data-lingua="en">Install</span></button>
+            <span slot="unsupported" class="nota"><span data-lingua="it" class="attiva">Questo browser non può usare la porta USB: apri la pagina con Chrome o Edge su un computer.</span><span data-lingua="en">This browser cannot use the USB port: open the page in Chrome or Edge on a computer.</span></span>
+            <span slot="not-allowed" class="nota"><span data-lingua="it" class="attiva">La pagina va aperta con un indirizzo https.</span><span data-lingua="en">The page must be opened over https.</span></span>
+        </esp-web-install-button>
+    </div>
+
+    <p class="firma"><span data-lingua="it" class="attiva">Il team MS2net</span><span data-lingua="en">The MS2net team</span></p>
+</main>
+<script>
+    // Language: remembered in this browser only; the page reads fine without it
+    function scegliLingua(l) {
+        document.documentElement.lang = l;
+        document.querySelectorAll('[data-lingua]').forEach(function (e) {
+            e.classList.toggle('attiva', e.getAttribute('data-lingua') === l);
+        });
+        document.querySelectorAll('[data-scegli]').forEach(function (b) {
+            b.setAttribute('aria-pressed', b.getAttribute('data-scegli') === l ? 'true' : 'false');
+        });
+        try { localStorage.setItem('ms2InstallaLingua', l); } catch (e) { }
+    }
+    document.querySelectorAll('[data-scegli]').forEach(function (b) {
+        b.addEventListener('click', function () { scegliLingua(b.getAttribute('data-scegli')); });
+    });
+    var iniziale = 'it';
+    try { iniziale = localStorage.getItem('ms2InstallaLingua') || (navigator.language.indexOf('it') === 0 ? 'it' : 'en'); } catch (e) { }
+    scegliLingua(iniziale);
+
+    // The version on offer is the one in the manifest the button installs
+    fetch('manifest.json', { cache: 'no-store' }).then(function (r) { return r.json(); })
+        .then(function (m) { document.getElementById('versione').textContent = m.version; })
+        .catch(function () { });
+</script>
+</body>
+</html>
