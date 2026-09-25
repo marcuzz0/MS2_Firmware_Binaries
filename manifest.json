@@ -1,13 +1,13 @@
 {
   "name": "MS2net",
-  "version": "1.2.101",
+  "version": "1.2.102",
   "new_install_prompt_erase": true,
   "builds": [
     {
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "Binaries/MS2_Firmware_v1_2_101_factory.bin",
+          "path": "Binaries/MS2_Firmware_v1_2_102_factory.bin",
           "offset": 0
         }
       ]
