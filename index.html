@@ -86,7 +86,7 @@
             padding: 12px 14px;
             margin-top: 16px;
         }
-        .azione { text-align: center; margin: 24px 0 8px; }
+        .azione { text-align: center; margin: 24px 0 0; }
         .installa {
             width: 220px;
             height: 44px;
@@ -100,7 +100,30 @@
             cursor: pointer;
         }
         .nota { color: var(--tenue); font-size: 14px; }
-        .firma { color: var(--tenue); font-size: 14px; margin-top: 28px; text-align: center; }
+        .firma { color: var(--tenue); font-size: 14px; margin: 10px 0 0; text-align: center; }
+
+        /* The install dialog is drawn by the flashing component: it gets the look of the
+           receiver's own waiting box - dark panel, red spinner - in both themes, and no
+           halo under the pointer */
+        :root,
+        ewt-install-dialog {
+            --md-sys-color-surface-container-high: #1e293b;
+            --md-sys-color-surface-container-highest: #273449;
+            --md-sys-color-surface: #1e293b;
+            --md-sys-color-surface-container: #1e293b;
+            --md-sys-color-on-surface: #e2e8f0;
+            --md-sys-color-on-surface-variant: #b6c2d1;
+            --md-sys-color-primary: #f87171;
+            --md-sys-color-on-primary: #1e293b;
+            --md-sys-color-scrim: #000000;
+            --md-circular-progress-active-indicator-color: #f87171;
+            --md-dialog-container-color: #1e293b;
+            --md-dialog-container-shape: 8px;
+            --md-ripple-hover-opacity: 0;
+            --md-ripple-pressed-opacity: 0;
+            --text-color: #b6c2d1;
+            --danger-color: #f87171;
+        }
         [data-lingua]:not(.attiva) { display: none; }
     </style>
 </head>
@@ -142,7 +165,7 @@
         </esp-web-install-button>
     </div>
 
-    <p class="firma"><span data-lingua="it" class="attiva">Il team MS2net</span><span data-lingua="en">The MS2net team</span></p>
+    <p class="firma">by marcuzz0</p>
 </main>
 <script>
     // Language: remembered in this browser only; the page reads fine without it
